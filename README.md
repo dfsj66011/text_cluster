@@ -173,7 +173,7 @@ Coherence Score:  0.41585289864166086
 
 一致性得分才 0.41，很低。另外有一个软件包 pyLDAvis 可用于 LDA 结果的可视化，如下图所示：
 
-<img src="https://img-blog.csdnimg.cn/20200920160259297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzE3OTc0NA==,size_16,color_FFFFFF,t_70#pic_center" width="800">
+<img src="./data/img/vis_lda.png" width="800">
 
 上面的图中，左侧每个圆圈表示一个主题，圈越大表示主题占比越大，理想状态下，对于该份数据集最好的图像应该是所有圆圈大小差不多，而且圈之间没有太多的重叠。
 
@@ -301,7 +301,7 @@ Coherence Score:  0.6824643745400414
 
 然而，LDA 中也有一个类似于 KMeans 中聚类数 K 的超参，到底设定多少个主题比较合适？在这里，我们通过循环遍历区间范围，并根据一致性得分画出折线图：
 
-<img src="https://img-blog.csdnimg.cn/20200920160340167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzE3OTc0NA==,size_16,color_FFFFFF,t_70#pic_center" width="400">
+<img src="./data/img/lda_coherence_score.png" width="400">
 
 实际上，我们并不总是寻找具有最高一致性得分的点，而是倾向于寻找具有较高分数平滑曲线段的左侧拐点，在上图明显我们应该选择 10 个主题数。
 
@@ -724,7 +724,7 @@ find_optimal_clusters(text, 20)
 ```
 
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20201013150549780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzE3OTc0NA==,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](./data/img/kmeans_sse.png)
 
 
 
