@@ -1,0 +1,6 @@
+joblib==0.16.0
+gensim==3.8.3
+jieba==0.42.1
+matplotlib==3.3.0
+pandas==1.1.0
+scikit_learn==0.23.2
